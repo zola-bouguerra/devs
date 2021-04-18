@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your favourite web site for </title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="imaage/logo.png" class="logo">
+           
+        </div>
+        <div class="side-bar">
+            <img src="imaage/menu.png" class="menu">
+            <div class="social-links">
+                <img src="imaage/fb.png">
+                <img src="imaage/ig.png">
+                <img src="imaage/tw.png">
+            </div>
+            <div class="useful-links">
+                <img src="imaage/share.png">
+                <img src="imaage/info.png">
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form>
+                        <input type="email" class="input-box" placeholder="your email Id" required />
+                        <input type="password" class="input-box" placeholder="your password" required />
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox" /><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+                    <a href="">Forget password</a>
+                </div>
+                <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="Your Name" required />
+                        <input type="email" class="input-box" placeholder="your email " required />
+                        <input type="password" class="input-box" placeholder="password" required />
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <input type="checkbox"/><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+                    <a href="">Forget password</a>
+                </div>
+            </div>
+        </div>
+        <div class="bubbles">
+            <img src="imaage/bubble.png">
+            <img src="imaage/bubble.png">
+            <img src="imaage/bubble.png">
+            <img src="imaage/bubble.png">
+            <img src="imaage/bubble.png">
+            <img src="imaage/bubble.png">
+            <img src="imaage/bubble.png">
+        </div> 
+    </div>
+  
+    <script>
+        const card = document.getElementById("card");
+        const front = document.querySelector('#card .card-front')
+        const back = document.querySelector('#card .card-back')
+       
+        async function openRegister(){
+            await (back.style.display = "block")
+            await (card.style.transform = "rotateY(-180deg)")
+            front.style.display = "none" 
+        }
+        async function openLogin(){
+            await (front.style.display = "block")
+            await (card.style.transform = "rotateY(0deg)")
+            back.style.display = "none"
+            
+        }
+    </script>
+</body>
+</html>
